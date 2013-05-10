@@ -13,7 +13,7 @@ public class Inmo {
 		Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmoapp_development", "root", "root");
 
 		Owner owner;
-		owner = Owner.createIt("email", "fede@email.com","first_name", "Fede","last_name", "Franco","street", "Caseros 269", "neighborhood", "centro", "city", "Rio Cuarto");
+		owner = Owner.createIt("email", "fede@email.com","first_name", "Fede","last_name", "Franco","street","dni", 37167263, "Caseros 269", "neighborhood", "centro", "city", "Rio Cuarto");
 		//e.saveIt();
 
 		Building.createIt("owner_id",owner.getId(),"type", "Departament","street", "Caseros 269", "neighborhood", "centro", "city", "Rio Cuarto","description", "Departamento de 3 ambientes en zona centrica con balcon, todos los servicios, amoblado","price", 500000,"status", "Sell");

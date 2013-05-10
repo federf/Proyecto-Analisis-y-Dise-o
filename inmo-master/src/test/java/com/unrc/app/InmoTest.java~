@@ -1,4 +1,4 @@
-/*package com.unrc.app;
+package com.unrc.app;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -16,4 +16,4 @@ public class InmoTest {
         assertEquals(10, 10);
     }
 
-}*/
+}

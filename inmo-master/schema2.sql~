@@ -1,0 +1,79 @@
+CREATE  TABLE IF NOT EXISTS `inmoapp_development`.`buildings` (
+  `idbuildings` INT(11) NOT NULL AUTO_INCREMENT ,
+  `owner` INT(11) NOT NULL ,
+  `description` VARCHAR(400) NULL DEFAULT NULL ,
+  `price` FLOAT NOT NULL ,
+  `status` VARCHAR(45) NOT NULL ,
+  `type` ENUM('Land','Farm','House','Departament','Garage') NOT NULL ,
+  `street` VARCHAR(45) NOT NULL ,
+  `neighborhood` VARCHAR(45) NOT NULL ,
+  `city` VARCHAR(45) NOT NULL ,
+  `owners_idowners` INT(11) NOT NULL ,
+  `owners_dni` INT(15) NOT NULL ,
+  `real_states_idreal_states` INT(11) NOT NULL ,
+  `real_states_name` VARCHAR(45) NOT NULL ,
+  `real_states_buildings_idbuildings` INT(11) NOT NULL ,
+  PRIMARY KEY (`idbuildings`, `owners_idowners`, `owners_dni`, `real_states_idreal_states`, `real_states_name`, `real_states_buildings_idbuildings`) ,
+  INDEX `fk_buildings_owners1` (`owners_idowners` ASC, `owners_dni` ASC) ,
+  INDEX `fk_buildings_real_states1` (`real_states_idreal_states` ASC, `real_states_name` ASC, `real_states_buildings_idbuildings` ASC) ,
+  CONSTRAINT `fk_buildings_owners1`
+    FOREIGN KEY (`owners_idowners` , `owners_dni` )
+    REFERENCES `inmoapp_development`.`owners` (`idowners` , `dni` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_buildings_real_states1`
+    FOREIGN KEY (`real_states_idreal_states` , `real_states_name` , `real_states_buildings_idbuildings` )
+    REFERENCES `inmoapp_development`.`real_states` (`idreal_states` , `name` , `buildings_idbuildings` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+CREATE  TABLE IF NOT EXISTS `inmoapp_development`.`owners` (
+  `idowners` INT(11) NOT NULL AUTO_INCREMENT ,
+  `first_name` VARCHAR(45) NOT NULL ,
+  `last_name` VARCHAR(45) NOT NULL ,
+  `dni` INT(15) NOT NULL ,
+  `email` VARCHAR(45) NULL DEFAULT NULL ,
+  `street` VARCHAR(45) NOT NULL ,
+  `neighborhood` VARCHAR(45) NOT NULL ,
+  `city` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`idowners`, `dni`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+CREATE  TABLE IF NOT EXISTS `inmoapp_development`.`real_states` (
+  `idreal_states` INT(11) NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(45) NOT NULL ,
+  `telephone` INT(12) NOT NULL ,
+  `email` VARCHAR(45) NULL DEFAULT NULL ,
+  `website` VARCHAR(45) NOT NULL ,
+  `street` VARCHAR(45) NOT NULL ,
+  `neighborhood` VARCHAR(45) NOT NULL ,
+  `city` VARCHAR(45) NOT NULL ,
+  `buildings_idbuildings` INT(11) NOT NULL ,
+  PRIMARY KEY (`idreal_states`, `name`, `buildings_idbuildings`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+CREATE  TABLE IF NOT EXISTS `inmoapp_development`.`owners_has_real_states` (
+  `owners_idowners` INT(11) NOT NULL ,
+  `owners_dni` INT(15) NOT NULL ,
+  `real_states_idreal_states` INT(11) NOT NULL ,
+  `real_states_name` VARCHAR(45) NOT NULL ,
+  `real_states_buildings_idbuildings` INT(11) NOT NULL ,
+  PRIMARY KEY (`owners_idowners`, `owners_dni`, `real_states_idreal_states`, `real_states_name`, `real_states_buildings_idbuildings`) ,
+  INDEX `fk_owners_has_real_states_real_states1` (`real_states_idreal_states` ASC, `real_states_name` ASC, `real_states_buildings_idbuildings` ASC) ,
+  INDEX `fk_owners_has_real_states_owners1` (`owners_idowners` ASC, `owners_dni` ASC) ,
+  CONSTRAINT `fk_owners_has_real_states_owners1`
+    FOREIGN KEY (`owners_idowners` , `owners_dni` )
+    REFERENCES `inmoapp_development`.`owners` (`idowners` , `dni` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_owners_has_real_states_real_states1`
+    FOREIGN KEY (`real_states_idreal_states` , `real_states_name` , `real_states_buildings_idbuildings` )
+    REFERENCES `inmoapp_development`.`real_states` (`idreal_states` , `name` , `buildings_idbuildings` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1
