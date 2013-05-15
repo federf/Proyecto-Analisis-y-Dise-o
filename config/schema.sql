@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS owners;
 CREATE TABLE owners(
-	id  smallint(100) not null auto_increment,
+	id smallint(100) not null auto_increment,
 	first_name VARCHAR(50) not null,
 	last_name VARCHAR(50) not null,
 	dni int(15),
@@ -8,8 +8,7 @@ CREATE TABLE owners(
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,
 	city varchar(45) not null,
-	buildings_id smallint(100) references buildings(idBuildings),	
-	constraint primary_key_owners primary key (id, dni)
+	constraint pk_owners primary key (id)
 );
 
 drop table if exists real_estates;
@@ -22,26 +21,28 @@ create table real_estates(
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,
 	city varchar(45) not null,
-	buildings_id smallint(100) references buildings(idBuildings), 
-	constraint primary_key_real_estates primary key (id)
+	constraint pk_real_estates primary key (id)
 );
 
 drop table if exists buildings;
 create table buildings(
 	id smallint(100) not null auto_increment,
 	type enum('Land','Farm','House','Departament','Garage') not null,	
+	owner_id smallint(100) not null references owners(id),
+	real_estate_id smallint(40) not null references real_estates(id),
 	description varchar(400),
 	price float not null,
 	status enum('Sell','Rent') not null,
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,
 	city varchar(45) not null,
-	constraint primary_buildings primary key (id)
+	constraint pk_buildings primary key (id)
 );
 
-drop table if exists owners_has_real_states;
-create table owners_has_real_states(
-	owner_id smallint(100) references owners(idOwner),
-	real_estates_id smallint(100) references real_states(idReal_estates),
-	constraint primary_owners_has_real_states primary key (owner_id, real_estates_id)
+drop table if exists owners_has_real_estates;
+create table owners_has_real_estates(
+	owner_id smallint(100),
+	real_estates_id smallint(100),
+	constraint del_owner_id foreign key (owner_id) references owners(id) on delete cascade,
+	constraint del_real_estates_id foreign key (real_estates_id) references real_estates(id) on delete cascade
 );
