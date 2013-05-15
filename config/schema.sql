@@ -7,7 +7,7 @@ CREATE TABLE owners(
 	email varchar(40),
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,
-	city varchar(45) not null,
+	city_id smallint(100) not null references cities(id),
 	constraint pk_owners primary key (id)
 );
 
@@ -20,7 +20,7 @@ create table real_estates(
 	website varchar(60) not null,
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,
-	city varchar(45) not null,
+	city_id smallint(100) not null references cities(id),
 	constraint pk_real_estates primary key (id)
 );
 
@@ -35,8 +35,15 @@ create table buildings(
 	status enum('Sell','Rent') not null,
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,
-	city varchar(45) not null,
+	city_id smallint(100) not null references cities(id),
 	constraint pk_buildings primary key (id)
+);
+
+drop table if exists cities;
+create table cities(
+	id smallint(100) not null auto_increment primary key, 
+	name varchar(100),
+	postal_code smallint(100)
 );
 
 drop table if exists owners_has_real_estates;
