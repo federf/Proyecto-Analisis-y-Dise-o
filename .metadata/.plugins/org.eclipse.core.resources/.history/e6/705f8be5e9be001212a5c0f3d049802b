@@ -1,0 +1,52 @@
+//esta clase sera utilizada para realizar las correspondientes conexiones entre dato de las tablas
+package src.main.java.com.unrc.app;
+//import org.javalite.activejdbc.Base;
+
+import src.main.java.com.unrc.app.models.Building;
+import src.main.java.com.unrc.app.models.Owner;
+import src.main.java.com.unrc.app.models.realEstate;
+
+public class Relaciones {
+
+	public void conectar_owner_building(String dni_owner, String street_building){
+		Owner dueño= Owner.findFirst("dni",dni_owner); //buscamos el dueño segun el dni
+		Building inmueble= Building.findFirst("street",street_building); //buscamos el inmueble por su direccion
+		dueño.add(inmueble); //agregamos la relacion entre el dueño y su inmueble
+	}
+	
+	public void conectar_owner_real_estates(String dni_owner, String name_re){
+		Owner dueño= Owner.findFirst("dni",dni_owner); //buscamos el dueño segun el dni
+		realEstate inmo= realEstate.findFirst("name",name_re); //buscamos la inmobiliaria por su nombre
+		dueño.add(inmo); //agregamos la relacion entre el dueño e inmobiliaria
+	}
+	
+	public void conectar_real_estate_buildings(String name_re, String street_building){
+		Building inmueble= Building.findFirst("street",street_building); //buscamos el dueño segun el dni
+		realEstate inmo= realEstate.findFirst("name",name_re); //buscamos la inmobiliaria por su nombre
+		inmo.add(inmueble); //agregamos la relacion entre el inmueble e inmobiliaria
+	}
+	
+	public void desconectar_owner_building(String dni_owner, String street_building){
+		Owner dueño= Owner.findFirst("dni",dni_owner); //buscamos el dueño segun el dni
+		Building inmueble= Building.findFirst("street",street_building); //buscamos el inmueble por su direccion
+		if (Building.belongsTo(Owner.class)){
+			dueño.remove(inmueble); //quitamos la relacion entre el dueño y su inmueble
+		}
+	}
+	
+	public void desconectar_real_estate_buildings(String name_re, String street_building){
+		Building inmueble= Building.findFirst("street",street_building); //buscamos el dueño segun el dni
+		realEstate inmo= realEstate.findFirst("name",name_re); //buscamos la inmobiliaria por su nombre
+		if(Building.belongsTo(realEstate.class)){
+			inmo.remove(inmueble); //quitamos la relacion entre el inmueble e inmobiliaria
+		}
+	}
+	
+	public void desconectar_owner_real_estates(String dni_owner, String name_re){
+		Owner dueño= Owner.findFirst("dni",dni_owner); //buscamos el dueño segun el dni
+		realEstate inmo= realEstate.findFirst("name",name_re); //buscamos la inmobiliaria por su nombre
+		if(realEstate.belongsTo(Owner.class)){
+			dueño.remove(inmo); //quitamos la relacion entre el dueño e inmobiliaria
+		}
+	}
+}

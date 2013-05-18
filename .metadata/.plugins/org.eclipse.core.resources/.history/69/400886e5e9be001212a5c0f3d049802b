@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/activejdbc-1.4.1.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/javalite-common-1.4.1.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/mysql-connector-java-5.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/inmo-master/target/dependency/slf4j-simple-1.6.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

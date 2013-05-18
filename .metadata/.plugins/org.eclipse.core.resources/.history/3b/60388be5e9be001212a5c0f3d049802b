@@ -1,0 +1,29 @@
+package src.main.java.com.unrc.app;
+
+import src.main.java.com.unrc.app.models.realEstate;
+
+public class ABMreal_estates {
+	public void createRealEstate(String nombre, int telefono, String website, String calle, String barrio, String ciudad){
+		realEstate buscar=realEstate.findFirst("name=?", nombre); //buscamos la existencia del elemento
+		if (buscar==null){ //si no existe, lo creamos
+			realEstate.createIt("name", nombre,"street",calle, "neighborhood", barrio, "city", ciudad,"telephone", telefono,"website", website);
+		}
+	}
+	
+	public void modifBuilding(String nombre, int telefono, String website, String calle, String barrio, String ciudad){
+		realEstate aModif = realEstate.findFirst("name=?",nombre);
+		aModif.set("name", nombre);
+		aModif.set("telephone", telefono);
+		aModif.set("website", website);
+		aModif.set("street", calle);
+		aModif.set("neighborhood", barrio);
+		aModif.set("city", ciudad);
+		aModif.saveIt();
+	}
+	
+	public void removeRealEstate(String nombre){
+		realEstate r= realEstate.findFirst("name=?", nombre);
+		r.delete();
+	}
+
+}

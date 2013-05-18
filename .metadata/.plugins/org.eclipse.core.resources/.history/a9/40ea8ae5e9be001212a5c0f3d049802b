@@ -1,0 +1,29 @@
+package src.main.java.com.unrc.app;
+
+import src.main.java.com.unrc.app.models.Building;
+import src.main.java.com.unrc.app.models.Owner;
+
+public class ABMBuilding {
+	public void createBuilding(int dni_Dueño, String tipo, String calle, String barrio, String ciudad, String descripcion, float precio, String estado){
+		Building buscar= Building.findFirst("street=?", calle, "neighborhood=?", barrio, "city=?", ciudad); //buscamos si existe el elemento anteriormente
+		if (buscar==null){ //si no existe lo creamos
+			Building.createIt("owner_id",Owner.findFirst("dni=?",dni_Dueño).getId(),"type", tipo,"street",calle, "neighborhood", barrio, "city",ciudad,"description", descripcion ,"price", precio,"status", estado);
+		}
+	}
+	
+	public void modifBuilding( String tipo, String calle, String barrio, String ciudad, String descripcion, float precio, String estado){
+		Building aModif = Building.findFirst("street=?", calle, "neighborhood=?", barrio, "city=?", ciudad);
+		aModif.set("type", tipo);
+		aModif.set("street", calle);
+		aModif.set("neighborhood", barrio);
+		aModif.set("description", descripcion);
+		aModif.set("price", precio);
+		aModif.set("status", estado);
+		aModif.saveIt();
+	}
+	
+	public void removeBuilding(String calle, String barrio, String ciudad){
+		Building b= Building.findFirst("street=?", calle, "neighborhood=?", barrio, "city=?", ciudad);
+		b.delete();
+	}
+}
