@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package com.unrc.app;
-=======
-/*package com.unrc.app;
->>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
 
 import org.junit.After;
 import org.junit.Assert;
@@ -20,8 +16,4 @@ public class InmoTest {
         assertEquals(10, 10);
     }
 
-<<<<<<< HEAD
 }
-=======
-}*/
->>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108

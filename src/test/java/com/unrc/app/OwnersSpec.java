@@ -1,10 +1,6 @@
 /*package com.unrc.app;
 
-<<<<<<< HEAD
 import com.unrc.app.models.Owner;
-=======
-import com.unrc.app.models.Owners;
->>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
 
 import org.javalite.activejdbc.Base;
 import org.junit.After;
@@ -17,11 +13,7 @@ public class OwnersSpec{
 
     @Before
     public void before(){
-<<<<<<< HEAD
         Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "root");
-=======
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmoapp_development", "root", "root");
->>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
         Base.openTransaction();
     }
 
@@ -34,11 +26,7 @@ public class OwnersSpec{
     @Test
     public void shouldValidateMandatoryFields(){
 
-<<<<<<< HEAD
         Owner owner = new Owner();
-=======
-        Owners owner = new Owners();
->>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
 
         //check errors
         the(owner).shouldNotBe("valid");
