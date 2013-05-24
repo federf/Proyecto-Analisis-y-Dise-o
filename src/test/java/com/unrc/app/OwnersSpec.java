@@ -1,4 +1,4 @@
-package com.unrc.app;
+/*package com.unrc.app;
 
 import com.unrc.app.models.Owner;
 
@@ -39,4 +39,4 @@ public class OwnersSpec{
         //all is good:
         the(owner).shouldBe("valid");
     }
-}
+}*/

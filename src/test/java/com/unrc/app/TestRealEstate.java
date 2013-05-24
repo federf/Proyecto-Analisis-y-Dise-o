@@ -1,18 +1,35 @@
 package com.unrc.app;
 
 import com.unrc.app.models.*;
+import org.javalite.activejdbc.Base;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 
 public class TestRealEstate {
 
+	@Before
+    public void before(){
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "root");
+        Base.openTransaction();
+    }
+
+    @After
+    public void after(){
+        Base.rollbackTransaction();
+        Base.close();
+    }
+
 	public static void testRealEstate() {
-		City rioCuarto;
-		rioCuarto = City.createIt("postal_code", 58433,"name", "Rio Cuarto");
+	
+		City.createIt("postal_code", 58433,"name", "Rio Cuarto");
 		//Creo Inmobiliaria		
-		ABMreal_estates.createRealEstate("String nombre", 123, "String website", "String calle", "String barrio", 1, 39939393);
+		//ABMreal_estates.createRealEstate("String nombre", 123,"string email", "String website", "String calle", "String barrio", 1, 39939393);
 		//Modifico Inmobiliaria
 		//modifRealEstate(String nombre, int telefono, String website, String calle, String barrio, int ciudad)
-		ABMreal_estates.modifRealEstate("nombreInmo", 1232, "web.com", "Calle", "calleej", "barrioej", 39939393);
+		//ABMreal_estates.modifRealEstate("nombreInmo","nombreInmo2", 1232,"email@ejemplo.com", "web.com", "calleej", "barrioej", 39939393);
 		//Elimino Inmobiliaria
-		ABMreal_estates.removeRealEstate("b@h.com");
+		//ABMreal_estates.removeRealEstate("b@h.com");
 	}
 }

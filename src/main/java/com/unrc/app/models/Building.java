@@ -4,6 +4,6 @@ import org.javalite.activejdbc.Model;
 
 public class Building extends Model {
 	static{
-		validatePresenceOf("owner_id","description","price","status","type", "street","neighborhood", "city","real_estate_id");
+		validatePresenceOf("owner_id","description","price","status","type", "street","neighborhood", "city_id","real_estate_id");
 	}
 }
