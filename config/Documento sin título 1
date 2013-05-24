@@ -1,8 +1,0 @@
-package com.unrc.app;
-
-import com.unrc.app.models.Building;
-import com.unrc.app.models.Owner;
-
-public class ABMCity {
-
-}

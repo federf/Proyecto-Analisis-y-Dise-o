@@ -1,5 +1,6 @@
 package com.unrc.app;
 
+<<<<<<< HEAD
 import com.unrc.app.models.*;
 
 public class ABMBuilding {
@@ -35,5 +36,27 @@ public class ABMBuilding {
 		City c=City.findFirst("postal_code=?", pc_ciudad); //buscamos la ciudad por codigo postal
 		Building b= Building.findFirst("street=? and neighborhood=? and city_id=?", calle, barrio, c.getId());//buscamos el inmueble a borrar
 		Relaciones.desconectar_building_city(b, pc_ciudad); //quitamos la relacion edificio-ciudad
+=======
+import com.unrc.app.models.Building;
+import com.unrc.app.models.Owner;
+
+public class ABMBuilding {
+	public static void createBuilding(int dni_Dueño, String tipo, String calle, String barrio, String ciudad, String descripcion, float precio, String estado){
+		Building.createIt("owner_id",Owner.findFirst("dni=?",dni_Dueño).getId(),"type", tipo,"street",calle, "neighborhood", barrio, "city",ciudad,"description", descripcion ,"price", precio,"status", estado);
+	}
+	
+	public static void modifBuilding( String tipo, String calle, String barrio, String ciudad, String descripcion, float precio, String estado){
+		Building aModif = Building.findFirst("street=?",calle);
+		aModif.set("type", tipo);
+		aModif.set("street", calle);
+		aModif.set("neighborhood", barrio);
+		aModif.set("description", descripcion);
+		aModif.set("price", precio);
+		aModif.set("status", estado);
+	}
+	
+	public static void removeBuilding(String street){
+		Building.delete("street=?",street);
+>>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
 	}
 }

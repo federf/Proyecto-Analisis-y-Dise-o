@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*package com.unrc.app;
+=======
+package com.unrc.app;
+>>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
 
 import org.junit.ClassRule;
 import org.junit.rules.ExternalResource;
@@ -11,4 +15,8 @@ import org.slf4j.LoggerFactory;
 @RunWith(Suite.class)
 @Suite.SuiteClasses( { InmoTest.class, OwnersSpec.class } )
 public class TestSuite {
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108

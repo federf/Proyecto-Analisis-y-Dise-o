@@ -1,9 +1,0 @@
-package src.main.java.com.unrc.app.models;
-
-import org.javalite.activejdbc.Model;
-
-
-
-public class owner__has__real__estates extends Model{
-
-}

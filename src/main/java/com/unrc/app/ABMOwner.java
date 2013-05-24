@@ -1,5 +1,6 @@
 package com.unrc.app;
 
+<<<<<<< HEAD
 import java.util.*;
 import com.unrc.app.models.Owner;
 import com.unrc.app.models.Building;
@@ -41,5 +42,31 @@ public class ABMOwner {
 			Relaciones.desconectar_owner_real_estate(o, inmob.get(i).getString("name")); //quitamos las relaciones inmobiliaria-dueño
 		}
 		o.delete(); //borramos el dueño
+=======
+import com.unrc.app.models.Owner;
+
+public class ABMOwner {
+
+	public static void createOwner(String email, String nombre, String apellido,int dni, String calle, String barrio, String ciudad){
+		Owner.createIt("email", email,"first_name", nombre,"last_name",apellido,"street",calle,"dni",dni, "neighborhood", barrio, "city",ciudad);
+	}
+	
+	public static void modifOwner(String email, String nombre, String apellido,int dni, String calle, String barrio, String ciudad){
+		Owner aModif = Owner.findFirst("dni=?",dni);
+		aModif.set("email", email);
+		aModif.set("first_name", nombre);
+		aModif.set("last_name", apellido);
+		aModif.set("street", calle);
+		aModif.set("neighborhood", barrio);
+		aModif.set("city", ciudad);
+	}
+	
+	public static void removeOwner(int dni){
+		Owner.delete("dni=?",dni);
+	}
+
+	public static Owner searchOwner(int dni) {
+		return Owner.findFirst("dni=?", dni);
+>>>>>>> 3de6e6c676dc26eae3614942c4b37f98442f9108
 	}
 }
