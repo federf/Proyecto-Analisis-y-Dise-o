@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.unrc.app.TestBuilding
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.021 sec <<< FAILURE!
+testOwner(com.unrc.app.TestBuilding)  Time elapsed: 0.002 sec  <<< ERROR!
+org.javalite.activejdbc.DBException: failed to find metamodel for class com.unrc.app.models.City. Are you sure that a corresponding table  exists in DB?
+	at org.javalite.activejdbc.Registry.getTableName(Registry.java:398)
+	at org.javalite.activejdbc.Model.getTableName(Model.java:2191)
+	at org.javalite.activejdbc.Model.getMetaModel(Model.java:59)
+	at org.javalite.activejdbc.Model.getMetaModelLocal(Model.java:946)
+	at org.javalite.activejdbc.Model.set(Model.java:196)
+	at com.unrc.app.models.City.set(City.java)
+	at org.javalite.activejdbc.Model.set(Model.java:189)
+	at com.unrc.app.models.City.set(City.java)
+	at org.javalite.activejdbc.ModelDelegate.setNamesAndValues(ModelDelegate.java:53)
+	at org.javalite.activejdbc.Model.create(Model.java:1544)
+	at org.javalite.activejdbc.Model.createIt(Model.java:1585)
+	at com.unrc.app.models.City.createIt(City.java)
+	at com.unrc.app.TestBuilding.testOwner(TestBuilding.java:28)
+

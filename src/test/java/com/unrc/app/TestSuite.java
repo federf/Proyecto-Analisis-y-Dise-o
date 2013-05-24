@@ -1,4 +1,4 @@
-/*package com.unrc.app;
+package com.unrc.app;
 
 import org.junit.ClassRule;
 import org.junit.rules.ExternalResource;
@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses( { InmoTest.class})//, TestOwner.class})//, TestRealEstate.class} )
+@Suite.SuiteClasses( { TestOwner.class, TestBuilding.class, TestRealEstate.class, TestCity.class} )
 public class TestSuite {
 }
-*/

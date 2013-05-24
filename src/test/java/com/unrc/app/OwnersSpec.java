@@ -1,4 +1,4 @@
-/*package com.unrc.app;
+package com.unrc.app;
 
 import com.unrc.app.models.Owner;
 
@@ -13,7 +13,7 @@ public class OwnersSpec{
 
     @Before
     public void before(){
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "root");
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "64784");
         Base.openTransaction();
     }
 
@@ -39,4 +39,4 @@ public class OwnersSpec{
         //all is good:
         the(owner).shouldBe("valid");
     }
-}*/
+}

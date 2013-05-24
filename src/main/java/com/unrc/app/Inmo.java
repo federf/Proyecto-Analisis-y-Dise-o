@@ -7,7 +7,7 @@ import com.unrc.app.models.City;
 public class Inmo {
 	
 	public static void main( String[] args ){
-		Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "root");
+		Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "64784");
 
 		//ABMCity.crearCiudad(12345,"Rio Cuarto");
 		
