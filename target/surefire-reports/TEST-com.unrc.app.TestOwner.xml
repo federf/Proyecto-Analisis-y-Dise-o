@@ -70,7 +70,7 @@
 	at org.javalite.activejdbc.Model.create(Model.java:1544)
 	at org.javalite.activejdbc.Model.createIt(Model.java:1585)
 	at com.unrc.app.models.City.createIt(City.java)
-	at com.unrc.app.TestOwner.testOwner(TestOwner.java:26)
+	at com.unrc.app.TestOwner.testOwner(TestOwner.java:25)
 </error>
   </testcase>
 </testsuite>

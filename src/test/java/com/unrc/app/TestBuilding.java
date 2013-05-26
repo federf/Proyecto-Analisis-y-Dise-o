@@ -23,15 +23,19 @@ public class TestBuilding extends TestCase {
         Base.close();
     }
 
-	public static void testOwner() {
+	public static void testBuilding() {
 		City rioCuarto;
 		rioCuarto = City.createIt("postal_code", 58433,"name", "Rio Cuarto");
-		Owner o=Owner.createIt("a@h.com", "nombre", "String apellido", 39939393, "String calle", "String barrio", rioCuarto.getInteger("id"));
-		realEstate r=realEstate.createIt("Nombre","telephone","website", "street","neighborhood", "city_id");		
-		ABMBuilding.createBuilding(39939393, "House", "String calle", "String barrio", rioCuarto.getInteger("id"), "Descripcion", 12, "Estado", "Nombre");
-		//Modifico Dueño
-		ABMBuilding.modifBuilding("String calle", rioCuarto.getInteger("id"), "House", "String calleNueva", "String barrioNuevo", rioCuarto.getInteger("id"), "String descripcion", 123, "String estado");
-		//Elimino Dueño
-		ABMBuilding.removeBuilding("String calleNueva", "String barrioNuevo", rioCuarto.getInteger("id"));
+		Owner o=Owner.createIt("a@h.com", "nombre", "String apellido", 39939393, "String calle", "String barrio", 1);
+		realEstate r=realEstate.createIt("Nombre","telephone","website", "street","neighborhood", "city_id");
+		try {
+			ABMBuilding.createBuilding(39939393, "House", "String calle", "String barrio", 1, "Descripcion", 12, "Estado", "Nombre");
+			//Modifico Dueño
+			ABMBuilding.modifBuilding("String calle","String barrio", 58433, "House", "String calleNueva", "String barrioNuevo", 1, "String descripcion", 123, "String estado",39939393, "Nombre");
+			//Elimino Dueño
+			ABMBuilding.removeBuilding("String calleNueva", "String barrioNuevo", 1);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 }

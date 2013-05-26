@@ -11,15 +11,20 @@ public class ABMCity {
 		}
 	}
 
-	public static void modifCiudad(int pc, String name){
-		City aModif= City.findFirst("postal_code=?", pc);
-		aModif.set("name=?", name);
-		aModif.saveIt();
+	public static void modifCiudad(int pc_viejo, int pc_nuevo, String nombre) throws NullCityException {
+		City aModif= City.findFirst("postal_code=?", pc_viejo);
+		if (aModif!=null) {
+			aModif.set("name", nombre);
+			aModif.set("postal_code", pc_nuevo);
+			aModif.saveIt();
+		} else
+			throw new NullCityException ("ABMCitie.modifCiudad: NullCityException");
 	}
 
 	public static void removeCiudad(int pc){
 		City c= City.findFirst("postal_code=?", pc);
-		c.delete();
+		if (c!=null)
+			c.delete();
 	}
 
 }
