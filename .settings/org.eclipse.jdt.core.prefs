@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Tue May 21 11:54:10 ART 2013
+=======
+#Fri May 24 15:18:14 ART 2013
+>>>>>>> f7f0812cd040813b8abc6b85cb855b180ff026b1
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
 eclipse.preferences.version=1
 org.eclipse.jdt.core.compiler.source=1.6
