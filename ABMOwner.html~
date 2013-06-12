@@ -1,0 +1,36 @@
+<html>
+	<meta name="description" content="Administraci&oacute;n de Due&ntilde;os">
+	<meta name="keywords" content="App, Inmobiliaria, Administracion, Inmuebles">	
+    <head>
+        <title>InmoWeb App-Administraci&oacute;n de Due&ntilde;os</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+10 text= "InmoWeb App">
+		<strong>Administraci&oacute;n de Due&ntilde;os</strong><br>
+		<body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "localhost:4567/ABMOwner" method="post">
+		<a href="localhost:4567/owners" ><strong>Listar Due&ntilde;os</strong></a><br>
+		<br> 
+
+		<a href="localhost:4567/insertOwner"><strong>Insertar Due&ntilde;o</strong></a><br>
+		<br> 
+		
+		<a href="localhost:4567/deleteOwner"><strong>Eliminar Due&ntilde;o</strong></a><br>
+		<br> 
+		
+		<a href="localhost:4567/editOwner"><strong>Modificar Due&ntilde;o</strong></a><br>
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="localhost:4567/Principal"><strong>Ir a Inicio</strong></a><br>
+		</form><br>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+	<meta name="description" content="Modificaci&oacute;n de Inmobiliaria">
+	<meta name="keywords" content="App, Inmobiliaria, Inmobiliaria, Modificar">	
+    <head>
+        <title>InmoWeb App-Modificaci&oacute;n de Inmobiliaria</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>Modificaci&oacute;n de Inmobiliaria</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "/modifRealEstate" method="put">
+		<strong>Datos de la Inmobiliaria a Modificar</strong> <br> 
+		<strong>Nombre Inmobiliaria</strong><input name="nameViejo" maxlength="40" size="40" value="" type="text"> <br> 
+		<br>
+		<strong>Nuevos Datos de la Inmobiliaria</strong> <br> 
+		<strong>Nombre Inmobiliaria</strong><input name="nameNuevo" maxlength="40" size="40" value="" type="text"> <br> 
+		<br>
+		<strong>Tel&eacute;fono </strong><input name="telephone" maxlength="12" size="12" value="" type="text"> <br>
+    	<br>
+		<strong>Email </strong><input name="email" maxlength="40" size="40" value="" type="text"> <br>
+    	<br>
+		<strong>WebSite </strong><input name="website" maxlength="60" size="60" value="" type="text"> <br>
+    	<br>
+		<strong>Calle </strong><input name="street" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>Barrio</strong><input name="neighborhood" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>C&oacute;digo Postal Ciudad</strong> <input name="city" maxlength="11" size="11" value="" type="text"><br>
+		<br>
+		<Strong>Precio</Strong><input type="text" name="Price" maxlength="12" size="12" value=""> <br/> 
+		<br/> 
+		<input value="Guardar" name="Guardar" type="submit"> <input value="Borrar" type="reset"> </form>
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="localhost:4567/ABMRealEstate"><strong>Volver a Administraci&oacute;n de Inmobiliarias</strong></a><br>
+		<br> 
+		<a href="localhost:4567/Principal"><strong>Ir a Inicio</strong></a><br>
+<br>
+</body></html>

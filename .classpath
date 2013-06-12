@@ -17,5 +17,16 @@
 	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/mysql-connector-java-5.0.4.jar"/>
 	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/slf4j-api-1.6.4.jar"/>
 	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/slf4j-simple-1.6.4.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/javax.servlet-3.0.0.v201112011016.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-http-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-io-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-security-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-server-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-servlet-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-util-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-webapp-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/jetty-xml-9.0.0.v20130308.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/spark-core-0.9.9.7-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/fede/Escritorio/Proyecto-Analisis-y-Dise-o/target/dependency/freemarker-2.3.19.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

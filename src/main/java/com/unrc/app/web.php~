@@ -1,0 +1,23 @@
+<HTML>
+	<meta name="description" content="Aplicacion web para administrar una inmobiliaria">
+	<meta name="keywords" content="App, Inmobiliaria">	
+    <HEAD>
+        <TITLE>InmoWeb App-Franco-Gastaldi-Analisis y Diseño de Sistemas 2013</TITLE>
+    </HEAD>
+
+    <BODY>
+		<BODY BGCOLOR=#0000FF>
+        <BODY TEXT= "InmoWeb App">
+		<form actio= "/building" method="post">
+		<input type="text" name="address">
+		<select name="type">
+			<option value="House"> Casa</option>
+			<option value="Land">Terreno</option>
+			<option value="Farm">Campo</option>
+			<option value="Departament">Departamento</option>
+			<option value="farm">Campo</option>
+		</select>
+		<input type="submit">
+	</form>
+    </BODY>
+</HTML>

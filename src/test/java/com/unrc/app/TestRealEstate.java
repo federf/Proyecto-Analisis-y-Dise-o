@@ -1,11 +1,12 @@
 package com.unrc.app;
 
-import com.unrc.app.models.*;
+import com.unrc.app.models.realEstate;
+
 import org.javalite.activejdbc.Base;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import static org.javalite.test.jspec.JSpec.the;
 
 public class TestRealEstate {
 
@@ -20,16 +21,22 @@ public class TestRealEstate {
         Base.rollbackTransaction();
         Base.close();
     }
+    @Test
+	public void testRealEstate() {
+        realEstate real = new realEstate();
 
-	public static void testRealEstate() {
-	
-		City.createIt("postal_code", 58433,"name", "Rio Cuarto");
-		//Creo Inmobiliaria		
-		//ABMreal_estates.createRealEstate("String nombre", 123,"string email", "String website", "String calle", "String barrio", 1, 39939393);
-		//Modifico Inmobiliaria
-		//modifRealEstate(String nombre, int telefono, String website, String calle, String barrio, int ciudad)
-		//ABMreal_estates.modifRealEstate("nombreInmo","nombreInmo2", 1232,"email@ejemplo.com", "web.com", "calleej", "barrioej", 39939393);
-		//Elimino Inmobiliaria
-		//ABMreal_estates.removeRealEstate("b@h.com");
+        //check errors
+        the(real).shouldNotBe("valid");
+        the(real.errors().get("name")).shouldBeEqual("value is missing");
+        the(real.errors().get("telephone")).shouldBeEqual("value is missing");
+        the(real.errors().get("website")).shouldBeEqual("value is missing");
+        the(real.errors().get("street")).shouldBeEqual("value is missing");
+        the(real.errors().get("neighborhood")).shouldBeEqual("value is missing");
+        the(real.errors().get("city_id")).shouldBeEqual("value is missing");
+       	ABMCity.crearCiudad(58433,"Rio Cuarto");
+       	//set missing values
+       	real.set("name", "nombre", "telephone", 123132, "website", "website", "street","street","neighborhood", "neighborhood", "city_id",58433);
+       	//all is good:
+       	the(real).shouldBe("valid");
 	}
 }

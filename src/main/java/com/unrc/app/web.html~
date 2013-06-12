@@ -1,0 +1,65 @@
+<html>
+	<meta name="description" content="Insercion de Inmueble">
+	<meta name="keywords" content="App, Inmobiliaria, Inmueble, Insertar">	
+    <head>
+        <title>InmoWeb App-Franco-Gastaldi-Analisis y Diseño de Sistemas 2013</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>Inserción de Inmueble</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "/building" method="post">
+		<strong>Calle </strong><input name="Calle" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>Barrio</strong><input name="Barrio" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>Codigo Postal Ciudad</strong> <input name="CP Ciudad" maxlength="11" size="11" value="" type="text"><br><br>
+		<strong>DNI Dueño</strong><input name="dniOwner" maxlength="11" size="11" value="" type="text"> <br><br> 
+		<strong>Nombre Inmobiliaria</strong><input name="realEstate" maxlength="40" size="40" value="" type="text"> <br> 
+		<br> 
+		<strong>Tipo de Inmueble</strong> <select name="type">
+			<option value="House"> Casa</option>
+			<option value="Land">Terreno</option>
+			<option value="Farm">Campo</option>
+			<option value="Departament">Departamento</option>
+			<option value="Garage">Garaje</option>
+		</select><br><br>
+		<strong>Descripción</strong><br><textarea name="Description" rows="10" cols="40">Escribe aquí una breve descripcion del inmueble</textarea> <br><br> 
+		<Strong>Precio</Strong><input type="text" name="Price" maxlength="12" size="12" value=""> <br/> 
+		<br/> 
+		<strong>Estado</strong> <select name="type">
+			<option value="Sell"> Venta</option>
+			<option value="Rent"> Alquiler</option>
+		</select>
+		
+<!--
+		<strong>Precio Minimo</strong> <select name="type">
+			<option value="0"> 0</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+			<option value="5000">50000</option>
+			<option value="10000">10000</option>
+			<option value="50000">50000</option>
+			<option value="100000">100000</option>
+			<option value="500000">500000</option>
+			<option value="100000">100000</option>
+		</select>
+		<strong>Precio Maximo</strong> <select name="type">
+			<option value="0"> 0</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+			<option value="5000">50000</option>
+			<option value="10000">10000</option>
+			<option value="50000">50000</option>
+			<option value="100000">100000</option>
+			<option value="500000">500000</option>
+			<option value="100000">100000</option>
+		</select>-->
+		<input value="Guardar" name="Guardar" type="submit"> <input value="Borrar" type="reset"> </form>
+<br>
+</body></html>

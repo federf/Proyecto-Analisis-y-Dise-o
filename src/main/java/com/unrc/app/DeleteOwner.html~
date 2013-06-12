@@ -1,0 +1,28 @@
+<html>
+	<meta name="description" content="Eliminaci&oacute;n de Due&ntilde;o">
+	<meta name="keywords" content="App, Inmobiliaria, Due&ntilde;o, Insertar">	
+    <head>
+        <title>InmoWeb App-Eliminaci&oacute;n de Due&ntilde;o</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>Eliminaci&oacute;n de Due&ntilde;o</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+  <form action="/owner" method="post"> 
+		<strong>DNI </strong><input name="Dni" maxlength="15" size="15" value="" type="text"> <br>
+    	<br>
+		<input value="Guardar" name="Guardar" type="submit"> <input value="Borrar" type="reset"> </form>
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="Principal.html"><strong>Ir a Inicio</strong></a><br>
+
+<br>
+</body></html>

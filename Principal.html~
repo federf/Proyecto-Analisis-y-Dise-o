@@ -1,0 +1,29 @@
+<html>
+	<meta name="description" content="Página Principal">
+	<meta name="keywords" content="App, Inmobiliaria, Principal">	
+    <head>
+        <title>InmoWeb App-Principal</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+10 text= "InmoWeb App-Franco-Gastaldi">
+		<body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "localhost:4567/Principal" method="post">
+		<a href="localhost:4567/ABMOwner"><strong>Administraci&oacute;n de Due&ntilde;os</strong></a><br>
+		<br> 
+		
+		<a href="localhost:4567/ABMRealEstate"><strong>Administraci&oacute;n de Inmobiliarias</strong></a><br>
+		<br> 
+		
+		<a href="ABMBuilding.html"><strong>Administraci&oacute;n de Inmuebles</strong></a><br>
+		<br> 
+
+		<a href="localhost:4567/search"><strong>B&uacute;squeda de Inmuebles</strong></a><br>
+		<br> 
+		</form><br>
+	</body>
+</html>

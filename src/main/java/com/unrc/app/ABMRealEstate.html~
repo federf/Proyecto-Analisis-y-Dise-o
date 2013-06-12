@@ -1,0 +1,29 @@
+<html>
+	<meta name="description" content="Administraci&oacute;n de Inmobiliarias">
+	<meta name="keywords" content="App, Inmobiliaria, Administracion, Inmobiliarias">	
+    <head>
+        <title>InmoWeb App-Administraci&oacute;n de Inmobiliarias</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+10 text= "InmoWeb App">
+		<strong>Administraci&oacute;n de Inmobiliarias</strong> <br>
+		<body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "/abmRealEstate" method="post">
+		<a href="localhost:4567/realEstates" ><strong>Listar Inmobiliarias</strong></a><br>
+		<br> 
+		<a href="InsertRealEstate.html"><strong>Insertar Inmobiliaria</strong></a><br>
+		<br> 
+		
+		<a href="DeleteRealEstate.html"><strong>Eliminar Inmobiliaria</strong></a><br>
+		<br> 
+		
+		<a href="ModifRealEstate.html"><strong>Modificar Inmobiliaria</strong></a><br>
+		<br> 
+		</form><br>
+	</body>
+</html>

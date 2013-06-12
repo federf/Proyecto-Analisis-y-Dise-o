@@ -1,29 +1,31 @@
 package com.unrc.app;
 
 import java.util.*;
-import com.unrc.app.models.Owner;
-import com.unrc.app.models.Building;
-import com.unrc.app.models.realEstate;
+import com.unrc.app.models.*;
 
 public class ABMOwner {
 
 	public static void createOwner(String email, String nombre, String apellido,int dni, String calle, String barrio, int pc_ciudad){
 		Owner buscar= Owner.findFirst("dni=?", dni); //buscamos si el elemento existe
-		if (buscar==null){ // si no existe, lo creamos
+		City c=City.findFirst("postal_code=?", pc_ciudad);
+		if (buscar==null &&(c!=null)){ // si no existe, lo creamos
 			Owner o= Owner.createIt("email", email,"first_name", nombre,"last_name",apellido,"street",calle,"dni",dni, "neighborhood", barrio, "city_id",pc_ciudad);
 			Relaciones.conectar_owner_city(o, pc_ciudad); //conectamos dueño con ciudad
 		}		
 	}
 	public static void modifOwner(int dniBuscado,String email, String nombre, String apellido,int dniNuevo, String calle, String barrio, int pc_ciudad){
+		City c= City.findFirst("postal_code=?",pc_ciudad);
 		Owner aModif = Owner.findFirst("dni=?",dniBuscado);
-		aModif.set("email", email);
-		aModif.set("first_name", nombre);
-		aModif.set("last_name", apellido);
-		aModif.set("dni", dniNuevo);
-		aModif.set("street", calle);
-		aModif.set("neighborhood", barrio);
-		aModif.set("city_id", pc_ciudad);
-		aModif.saveIt();
+		if ((aModif!=null)&&(c!=null)){
+			aModif.set("email", email);
+			aModif.set("first_name", nombre);
+			aModif.set("last_name", apellido);
+			aModif.set("dni", dniNuevo);
+			aModif.set("street", calle);
+			aModif.set("neighborhood", barrio);
+			aModif.set("city_id", c.getId());
+			aModif.saveIt();
+		}
 	}
 	
 	public static void removeOwner(int dni){
@@ -41,5 +43,11 @@ public class ABMOwner {
 			Relaciones.desconectar_owner_real_estate(o, inmob.get(i).getString("name")); //quitamos las relaciones inmobiliaria-dueño
 		}
 		o.delete(); //borramos el dueño
+	}
+	
+	
+	public static String toString(Owner o) {
+		City c=City.findFirst("id=?",o.getInteger("city_id"));
+		return "DNI= "+o.getInteger("dni").toString()+" Nombre= "+o.getString("first_name")+" Apellido= "+o.getString("last_name")+" Email= "+o.getString("email")+" Direccion= "+o.getString("street")+", Barrio "+o.getString("neighborhood")+", "+c.getString("name");
 	}
 }

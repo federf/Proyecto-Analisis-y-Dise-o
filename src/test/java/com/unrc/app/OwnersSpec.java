@@ -1,4 +1,4 @@
-/*package com.unrc.app;
+package com.unrc.app;
 
 import com.unrc.app.models.Owner;
 
@@ -34,9 +34,9 @@ public class OwnersSpec{
         the(owner.errors().get("last_name")).shouldBeEqual("value is missing");
 
         //set missing values
-        owner.set("first_name", "Fede", "last_name", "Franco");
+        owner.set("first_name", "Federico", "last_name", "Franco");
 
         //all is good:
         the(owner).shouldBe("valid");
     }
-}*/
+}

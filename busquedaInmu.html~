@@ -1,0 +1,69 @@
+<html>
+	<meta name="description" content="Busqueda de inmuebles InmoApp">
+	<meta name="keywords" content="App, Inmobiliaria, Busqueda">	
+    <head>
+        <title>InmoWeb App-B&uacute;squeda de Inmuebles</title>
+    </head>
+
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>B&uacute;squeda de Inmuebles</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "/searchBuilding" method="get">
+		<strong>DNI Due&ntilde;o</strong><input type="text" name="dniOwner" maxlength="15" size="15" value=""> <br>
+		<br>
+		<Strong>Nombre Inmobiliaria</Strong><input type="text" name="realEstateName" maxlength="40" size="40" value=""> <br/> 
+		<br/> 	 
+		<Strong>C&oacute;digo Postal Ciudad</Strong> <input type="text" name="city" maxlength="11" size="11" value=""> <br/><br/>
+		<Strong>Tipo de Inmueble</Strong> <select name="type">
+			<option value=""></option>			
+			<option value="House"> Casa</option>
+			<option value="Land">Terreno</option>
+			<option value="Farm">Campo</option>
+			<option value="Departament">Departamento</option>
+			<option value="Garage">Garaje</option>
+		</select><br/> <br/> 
+		<Strong>Estado</Strong> <select name="status">
+			<option value=""></option>			
+			<option value="Rent">Alquiler</option>
+			<option value="Sell">Venta</option>
+		</select><br/> <br/> 
+		<Strong>Precio M&iacute;nimo</Strong> <select name="minPrice">
+			<option value="0"> 0</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+			<option value="5000">50000</option>
+			<option value="10000">10000</option>
+			<option value="50000">50000</option>
+			<option value="100000">100000</option>
+			<option value="500000">500000</option>
+			<option value="1000000">1000000</option>
+		</select>
+		<Strong>Precio M&aacute;ximo</Strong> <select name="maxPrice">
+			<option value="0"> 0</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+			<option value="5000">5000</option>
+			<option value="10000">10000</option>
+			<option value="50000">50000</option>
+			<option value="100000">100000</option>
+			<option value="500000">500000</option>
+			<option value="10000000">1000000</option>
+		</select>
+		<br>
+		<input type="submit" value="Enviar"> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="localhost:4567/Principal"><strong>Ir a Inicio</strong></a><br>
+	</Div>
+	</form>
+    </body>
+</html>

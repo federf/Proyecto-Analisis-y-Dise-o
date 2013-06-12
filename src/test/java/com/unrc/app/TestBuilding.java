@@ -1,0 +1,49 @@
+package com.unrc.app;
+
+import com.unrc.app.models.Building;
+
+import org.javalite.activejdbc.Base;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.javalite.test.jspec.JSpec.the;
+
+public class TestBuilding {
+    @Before
+    public void before(){
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/inmo", "root", "root");
+        Base.openTransaction();
+    }
+
+    @After
+    public void after(){
+        Base.rollbackTransaction();
+        Base.close();
+    }
+    @Test
+	public void shouldValidateMandatoryFields() {
+        Building building = new Building();
+        //check errors
+        the(building).shouldNotBe("valid");
+        the(building.errors().get("owner_id")).shouldBeEqual("value is missing");
+        the(building.errors().get("description")).shouldBeEqual("value is missing");
+        the(building.errors().get("price")).shouldBeEqual("value is missing");
+        the(building.errors().get("status")).shouldBeEqual("value is missing");
+        the(building.errors().get("type")).shouldBeEqual("value is missing");
+        the(building.errors().get("street")).shouldBeEqual("value is missing");
+        the(building.errors().get("neighborhood")).shouldBeEqual("value is missing");
+        the(building.errors().get("city_id")).shouldBeEqual("value is missing");
+        the(building.errors().get("real_estate_id")).shouldBeEqual("value is missing");
+        try {
+        	ABMCity.crearCiudad(58433,"Rio Cuarto");
+        	ABMOwner.createOwner("email", "nombre", "apellido", 36649784, "calle", "barrio", 58433);
+        	ABMreal_estates.createRealEstate("nombre", 12335, "email", "website", "adsfadsf", "sdfer", 58433, 36649784 );
+
+        	//Creo Building 
+        	building.set("owner_id",1, "description", "description","price",21, "status","Shell","type", "House", "street", "asdfasdf","neighborhood", "neighborhood", "city_id", 1, "real_estate_id", 1);
+        	the(building).shouldBe("valid");
+        } catch (Exception e) {
+        	System.out.println(e);
+        }
+	}
+}

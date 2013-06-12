@@ -31,7 +31,7 @@ create table buildings(
 	owner_id integer(100) not null references owners(id),
 	real_estate_id integer(100) not null references real_estates(id),
 	description varchar(400),
-	price float not null,
+	price integer(255) not null,
 	status enum('Sell','Rent') not null,
 	street varchar(45) not null,
 	neighborhood varchar(45) not null,

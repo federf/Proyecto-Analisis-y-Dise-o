@@ -1,0 +1,43 @@
+<html>
+	<meta name="description" content="Modificaci&oacute;n de Due&ntilde;o">
+	<meta name="keywords" content="App, Inmobiliaria, Due&ntilde;o, Modificar">	
+    <head>
+        <title>InmoWeb App-Modificaci&oacute;n de Due&ntilde;o</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>Modificaci&oacute;n de Due&ntilde;o</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+  <form action="/owner" method="post"> 
+		<strong>Datos del Due&ntilde;o a Modificar</strong> <br>
+		<strong>DNI </strong><input name="Dni1" maxlength="15" size="15" value="" type="text"> <br>
+    	<br>
+		<strong>Nuevos Datos del Due&ntilde;o</strong> <br>
+    	<strong>Nombre</strong><input name="Name" maxlength="50" size="50" value="" type="text"> <br>
+    	<br>
+		<strong>Apellido </strong><input name="Last_name" maxlength="50" size="50" value="" type="text"> <br>
+    	<br>
+<!--		<strong>DNI </strong><input name="Dni2" maxlength="15" size="15" value="" type="text"> <br>
+    	<br>-->
+		<strong>Email </strong><input name="Email" maxlength="40" size="40" value="" type="text"> <br>
+    	<br>
+		<strong>Calle </strong><input name="Street" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>Barrio</strong><input name="Neighborhood" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>C&oacute;digo Postal Ciudad</strong> <input name="city_id" maxlength="11" size="11" value="" type="text"><br><br>
+		<input value="Guardar" name="Guardar" type="submit"> <input value="Borrar" type="reset"> </form>
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="Principal.html"><strong>Ir a Inicio</strong></a><br>
+
+<br>
+</body></html>

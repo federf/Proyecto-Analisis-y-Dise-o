@@ -1,0 +1,27 @@
+<html>
+	<meta name="description" content="Eliminaci&oacute;n de Inmobiliaria">
+	<meta name="keywords" content="App, Inmobiliaria, Inmobiliaria, Insertar">	
+    <head>
+        <title>InmoWeb App-Eliminaci&oacute;n de Inmobiliaria</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>Eliminaci&oacute;n de Inmobiliaria</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "/realEstate" method="post">
+		<strong>Nombre Inmobiliaria</strong><input name="Name" maxlength="40" size="40" value="" type="text"> <br> 
+		<br>
+		<input value="Guardar" name="Guardar" type="submit"> <input value="Borrar" type="reset"> </form>
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="Principal.html"><strong>Ir a Inicio</strong></a><br>
+<br>
+</body></html>

@@ -1,0 +1,41 @@
+<html>
+	<meta name="description" content="Inserci&oacute;n de Inmobiliaria">
+	<meta name="keywords" content="App, Inmobiliaria, Inmobiliaria, Insertar">	
+    <head>
+        <title>InmoWeb App-Inserci&oacute;n de Inmobiliaria</title>
+    </head>
+    <body>
+		<Div Align=Center><h1> InmoWeb App </h1>
+		<HR align="CENTER" size="2" width="80%" color="Black">
+		<body BGCOLOR=lightblue>
+        <body font size=+2 text= "InmoWeb App">
+		<strong>Inserci&oacute;n de Inmobiliaria</strong>
+        <body Link= "blue">
+        <body Vlink= "purple">
+        <body Alink= "red">
+		<form action= "insertRealEstate" method="post">
+		<strong>Nombre Inmobiliaria</strong><input name="Name" maxlength="40" size="40" value="" type="text"> <br> 
+		<br>
+		<strong>Tel&eacute;fono </strong><input name="Telephone" maxlength="12" size="12" value="" type="text"> <br>
+    	<br>
+		<strong>Email </strong><input name="Email" maxlength="40" size="40" value="" type="text"> <br>
+    	<br>
+		<strong>WebSite </strong><input name="website" maxlength="60" size="60" value="" type="text"> <br>
+    	<br>
+		<strong>Calle </strong><input name="Street" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>Barrio</strong><input name="Neighborhood" maxlength="45" size="45" value="" type="text"> <br> 
+		<br> 
+		<strong>C&oacute;digo Postal Ciudad</strong> <input name="city_id" maxlength="11" size="11" value="" type="text"><br><br>
+		<strong>DNI Due&ntilde;o</strong><input name="dniOwner" maxlength="11" size="11" value="" type="text"> <br><br> 
+		<input value="Guardar" name="Guardar" type="submit"> <input value="Borrar" type="reset"> </form>
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<br> 
+		<a href="ABMRealEstate.html"><strong>Volver a Administraci&oacute;n de Inmobiliarias</strong></a><br>
+		<br> 
+		<a href="Principal.html"><strong>Ir a Inicio</strong></a><br>
+<br>
+</body></html>
